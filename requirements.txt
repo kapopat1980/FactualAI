@@ -1,0 +1,30 @@
+# Core (always required)
+numpy
+pandas
+scikit-learn
+flask
+flask-cors
+langdetect
+deep-translator
+feedparser
+requests
+
+# Testing
+pytest
+pytest-mock
+
+# --- Optional extras ---
+# Production embedding backend used for the paper's reported 95% accuracy.
+# Uncomment to install (pulls in PyTorch, ~1-2GB):
+# sentence-transformers
+
+# Image OCR support (also requires the `tesseract-ocr` system package):
+# opencv-python
+# pytesseract
+
+# Audio transcription support:
+# faster-whisper
+
+# YouTube video support (also requires the `ffmpeg` system binary):
+# yt-dlp
+# pydub
