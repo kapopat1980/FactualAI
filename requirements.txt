@@ -14,7 +14,7 @@ pytest
 pytest-mock
 
 # --- Optional extras ---
-# Production embedding backend used for the paper's reported 95% accuracy.
+# Production embedding backend (all-mpnet-base-v2) used for the paper's production classifier.
 # Uncomment to install (pulls in PyTorch, ~1-2GB):
 # sentence-transformers
 

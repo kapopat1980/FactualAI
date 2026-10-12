@@ -35,7 +35,7 @@ def test_weights_sum_to_one():
         ("Fake", 0.9, 0.9),
         ("Real", 0.9, 0.1),
         ("Real", 0.6, 0.4),
-        ("Unknown", 0.5, 0.5),
+        ("fake", 0.7, 0.7),
     ],
 )
 def test_llm_verdict_to_fake_score(label, confidence, expected):
@@ -129,3 +129,24 @@ def test_llm_reasoner_raises_unavailable_on_connection_error(monkeypatch):
     reasoner = LLMReasoner()
     with pytest.raises(LLMUnavailableError):
         reasoner.classify("some article text")
+
+
+def test_unknown_label_is_an_abstention():
+    verdict = LLMVerdict(label="Unknown", confidence=0.5, justification="cannot judge")
+    assert llm_verdict_to_fake_score(verdict) is None
+
+
+def test_classify_with_ensemble_falls_back_to_rf_when_llm_abstains():
+    """An "Unknown" answer must not pull the score towards 0.5: the ensemble
+    reduces to the Random Forest and the abstention is flagged (Section 4.4)."""
+
+    class AbstainingReasoner:
+        def classify(self, text):
+            return LLMVerdict(label="Unknown", confidence=0.5, justification="transcript unclear")
+
+    result = classify_with_ensemble("garbled text", rf_fake_score=0.25, llm_reasoner=AbstainingReasoner())
+    assert result.used_llm is False
+    assert result.llm_abstained is True
+    assert result.ensemble_fake_score == pytest.approx(0.25)
+    assert result.label == "Real"
+    assert result.llm_justification == "transcript unclear"

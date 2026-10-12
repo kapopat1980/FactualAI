@@ -1,0 +1,406 @@
+{
+ "S1_titles": {
+  "isot_titles_cv": {
+   "acc": [
+    0.9138939232069474,
+    0.002533740542965496
+   ],
+   "prec": [
+    0.9253656731587476,
+    0.0033546606582496186
+   ],
+   "rec": [
+    0.8832294208639773,
+    0.006257825078589691
+   ],
+   "f1": [
+    0.9037883513264102,
+    0.0030828254324208712
+   ],
+   "macro_f1": [
+    0.9129322655202852,
+    0.002601828659657444
+   ],
+   "n": [
+    7820.6,
+    0.48989794855663565
+   ],
+   "auc": [
+    0.9737351002017982,
+    0.0006341807355853672
+   ]
+  },
+  "politifact -> ISOT": {
+   "acc": 0.5927678183259596,
+   "prec": 0.5388229766239868,
+   "rec": 0.7684704305578824,
+   "f1": 0.6334760392211021,
+   "macro_f1": 0.5876816329592276,
+   "n": 39103,
+   "auc": 0.6859274150956264
+  },
+  "gossipcop -> ISOT": {
+   "acc": 0.5422601846405647,
+   "prec": 0.75,
+   "rec": 0.0006701289998324678,
+   "f1": 0.0013390615410366568,
+   "macro_f1": 0.35221142483683887,
+   "n": 39103,
+   "auc": 0.49013907595357037
+  },
+  "politifact+gossipcop -> ISOT": {
+   "acc": 0.5474004552080403,
+   "prec": 0.8011527377521613,
+   "rec": 0.015524655162785502,
+   "f1": 0.030459077462473977,
+   "macro_f1": 0.36762812426633174,
+   "n": 39103,
+   "auc": 0.5731190616195881
+  },
+  "ISOT -> politifact": {
+   "acc": 0.6002034587995931,
+   "prec": 0.5374732334047109,
+   "rec": 0.5864485981308412,
+   "f1": 0.5608938547486033,
+   "macro_f1": 0.5969735380185593,
+   "n": 983,
+   "auc": 0.6556011619095732
+  },
+  "gossipcop -> politifact": {
+   "acc": 0.5666327568667345,
+   "prec": 1.0,
+   "rec": 0.004672897196261682,
+   "f1": 0.009302325581395349,
+   "macro_f1": 0.36597928779069766,
+   "n": 983,
+   "auc": 0.556443125368359
+  },
+  "ISOT+gossipcop -> politifact": {
+   "acc": 0.6215666327568667,
+   "prec": 0.5848484848484848,
+   "rec": 0.45093457943925236,
+   "f1": 0.5092348284960422,
+   "macro_f1": 0.6006439043142462,
+   "n": 983,
+   "auc": 0.644455670623895
+  },
+  "ISOT -> gossipcop": {
+   "acc": 0.5078844577325553,
+   "prec": 0.2668189004040049,
+   "rec": 0.6206332992849847,
+   "f1": 0.3731957496468276,
+   "macro_f1": 0.48406145597690886,
+   "n": 20737,
+   "auc": 0.5584699920396242
+  },
+  "politifact -> gossipcop": {
+   "acc": 0.3558856150841491,
+   "prec": 0.2558568955568378,
+   "rec": 0.9058222676200204,
+   "f1": 0.3990101237345332,
+   "macro_f1": 0.3525519733951382,
+   "n": 20737,
+   "auc": 0.6089336294477938
+  },
+  "ISOT+politifact -> gossipcop": {
+   "acc": 0.5083184645802189,
+   "prec": 0.2666197059082504,
+   "rec": 0.6185903983656793,
+   "f1": 0.37263106079251784,
+   "macro_f1": 0.4841904015404981,
+   "n": 20737,
+   "auc": 0.5585617755725945
+  },
+  "_done": true,
+  "_minutes": 26.7
+ },
+ "S2_llms": {
+  "llama3.2:3b": {
+   "acc": 0.711,
+   "prec": 0.9668508287292817,
+   "rec": 0.38209606986899564,
+   "f1": 0.5477308294209703,
+   "macro_f1": 0.66769348230784,
+   "n": 1000,
+   "auc": 0.698468392980873,
+   "label_counts": {
+    "Fake": 181,
+    "Real": 819
+   },
+   "median_latency_s": 1.2384785413742065,
+   "p95_latency_s": 1.5553864359855647,
+   "val_acc_by_w": {
+    "0.0": 0.704,
+    "0.1": 0.704,
+    "0.2": 0.704,
+    "0.3": 0.704,
+    "0.4": 0.704,
+    "0.5": 0.792,
+    "0.6": 0.874,
+    "0.7": 0.902,
+    "0.8": 0.926,
+    "0.9": 0.934,
+    "1.0": 0.93
+   },
+   "selected_w_rf": 0.9,
+   "ens_selected_test_half": {
+    "acc": 0.91,
+    "prec": 0.9330143540669856,
+    "rec": 0.8628318584070797,
+    "f1": 0.896551724137931,
+    "macro_f1": 0.908452853219408,
+    "n": 500,
+    "auc": 0.9738146760545184
+   },
+   "ens_fixed_0.6_test_half": {
+    "acc": 0.88,
+    "prec": 0.9770114942528736,
+    "rec": 0.7522123893805309,
+    "f1": 0.85,
+    "macro_f1": 0.875,
+    "n": 500,
+    "auc": 0.9768829532975906
+   },
+   "rf_only_test_half": {
+    "acc": 0.914,
+    "prec": 0.9255813953488372,
+    "rec": 0.8805309734513275,
+    "f1": 0.9024943310657596,
+    "macro_f1": 0.9127856270713414,
+    "n": 500,
+    "auc": 0.9692364834313029
+   },
+   "llm_only_test_half": {
+    "acc": 0.718,
+    "prec": 0.967032967032967,
+    "rec": 0.3893805309734513,
+    "f1": 0.555205047318612,
+    "macro_f1": 0.6743814402039618,
+    "n": 500,
+    "auc": 0.7001566436276725
+   }
+  },
+  "llama3.1:8b": {
+   "acc": 0.874,
+   "prec": 0.9345549738219895,
+   "rec": 0.7794759825327511,
+   "f1": 0.85,
+   "macro_f1": 0.8706896551724137,
+   "n": 1000,
+   "auc": 0.8872665527965323,
+   "label_counts": {
+    "Fake": 382,
+    "Real": 618
+   },
+   "median_latency_s": 1.9736084938049316,
+   "p95_latency_s": 2.448379588127136,
+   "val_acc_by_w": {
+    "0.0": 0.868,
+    "0.1": 0.868,
+    "0.2": 0.868,
+    "0.3": 0.868,
+    "0.4": 0.874,
+    "0.5": 0.91,
+    "0.6": 0.946,
+    "0.7": 0.95,
+    "0.8": 0.952,
+    "0.9": 0.94,
+    "1.0": 0.93
+   },
+   "selected_w_rf": 0.8,
+   "ens_selected_test_half": {
+    "acc": 0.932,
+    "prec": 0.9363636363636364,
+    "rec": 0.911504424778761,
+    "f1": 0.9237668161434978,
+    "macro_f1": 0.9311974874941316,
+    "n": 500,
+    "auc": 0.9849089206123636
+   },
+   "ens_fixed_0.6_test_half": {
+    "acc": 0.944,
+    "prec": 0.9626168224299065,
+    "rec": 0.911504424778761,
+    "f1": 0.9363636363636364,
+    "macro_f1": 0.9431818181818181,
+    "n": 500,
+    "auc": 0.9887765648213939
+   },
+   "rf_only_test_half": {
+    "acc": 0.914,
+    "prec": 0.9255813953488372,
+    "rec": 0.8805309734513275,
+    "f1": 0.9024943310657596,
+    "macro_f1": 0.9127856270713414,
+    "n": 500,
+    "auc": 0.9692364834313029
+   },
+   "llm_only_test_half": {
+    "acc": 0.88,
+    "prec": 0.9368421052631579,
+    "rec": 0.7876106194690266,
+    "f1": 0.8557692307692307,
+    "macro_f1": 0.8765147523709167,
+    "n": 500,
+    "auc": 0.8928363800788062
+   }
+  },
+  "_done": true,
+  "_minutes": 56.2
+ },
+ "S3_multilingual": {
+  "en_excerpt": {
+   "acc": 0.91,
+   "prec": 0.9512195121951219,
+   "rec": 0.8478260869565217,
+   "f1": 0.896551724137931,
+   "macro_f1": 0.908452853219408,
+   "n": 200,
+   "auc": 0.978713768115942
+  },
+  "multiling_encoder_en_excerpt": {
+   "acc": 0.9,
+   "prec": 0.875,
+   "rec": 0.9130434782608695,
+   "f1": 0.8936170212765957,
+   "macro_f1": 0.8996386993175431,
+   "n": 200,
+   "auc": 0.9733293075684379
+  },
+  "hi": {
+   "roundtrip_then_english_rf": {
+    "acc": 0.875,
+    "prec": 0.935064935064935,
+    "rec": 0.782608695652174,
+    "f1": 0.8520710059171598,
+    "macro_f1": 0.8719229488460258,
+    "n": 200,
+    "auc": 0.9715177133655395
+   },
+   "native_multilingual_rf": {
+    "acc": 0.895,
+    "prec": 0.8901098901098901,
+    "rec": 0.8804347826086957,
+    "f1": 0.8852459016393442,
+    "macro_f1": 0.8942358540454786,
+    "n": 200,
+    "auc": 0.9565217391304348
+   },
+   "roundtrip_semantic_similarity": 0.9308421611785889,
+   "pred_agreement_with_english": 0.965
+  },
+  "mr": {
+   "roundtrip_then_english_rf": {
+    "acc": 0.89,
+    "prec": 0.9487179487179487,
+    "rec": 0.8043478260869565,
+    "f1": 0.8705882352941177,
+    "macro_f1": 0.8874680306905371,
+    "n": 200,
+    "auc": 0.9680958132045089
+   },
+   "native_multilingual_rf": {
+    "acc": 0.875,
+    "prec": 0.8526315789473684,
+    "rec": 0.8804347826086957,
+    "f1": 0.8663101604278075,
+    "macro_f1": 0.8744696342045141,
+    "n": 200,
+    "auc": 0.9527979066022544
+   },
+   "roundtrip_semantic_similarity": 0.898540198802948,
+   "pred_agreement_with_english": 0.95
+  },
+  "gu": {
+   "roundtrip_then_english_rf": {
+    "acc": 0.88,
+    "prec": 0.9358974358974359,
+    "rec": 0.7934782608695652,
+    "f1": 0.8588235294117647,
+    "macro_f1": 0.8772378516624041,
+    "n": 200,
+    "auc": 0.9652777777777778
+   },
+   "native_multilingual_rf": {
+    "acc": 0.89,
+    "prec": 0.9166666666666666,
+    "rec": 0.8369565217391305,
+    "f1": 0.875,
+    "macro_f1": 0.8883928571428572,
+    "n": 200,
+    "auc": 0.9442431561996779
+   },
+   "roundtrip_semantic_similarity": 0.9228324890136719,
+   "pred_agreement_with_english": 0.96
+  },
+  "ta": {
+   "roundtrip_then_english_rf": {
+    "acc": 0.855,
+    "prec": 0.9436619718309859,
+    "rec": 0.7282608695652174,
+    "f1": 0.8220858895705522,
+    "macro_f1": 0.84986151018612,
+    "n": 200,
+    "auc": 0.9684480676328503
+   },
+   "native_multilingual_rf": {
+    "acc": 0.795,
+    "prec": 0.9180327868852459,
+    "rec": 0.6086956521739131,
+    "f1": 0.7320261437908496,
+    "macro_f1": 0.7830171204784208,
+    "n": 200,
+    "auc": 0.9154589371980675
+   },
+   "roundtrip_semantic_similarity": 0.896811306476593,
+   "pred_agreement_with_english": 0.935
+  },
+  "bn": {
+   "roundtrip_then_english_rf": {
+    "acc": 0.88,
+    "prec": 0.9358974358974359,
+    "rec": 0.7934782608695652,
+    "f1": 0.8588235294117647,
+    "macro_f1": 0.8772378516624041,
+    "n": 200,
+    "auc": 0.9668880837359098
+   },
+   "native_multilingual_rf": {
+    "acc": 0.86,
+    "prec": 0.8902439024390244,
+    "rec": 0.7934782608695652,
+    "f1": 0.8390804597701149,
+    "macro_f1": 0.8575933272301902,
+    "n": 200,
+    "auc": 0.9533514492753623
+   },
+   "roundtrip_semantic_similarity": 0.906663179397583,
+   "pred_agreement_with_english": 0.94
+  },
+  "example": {
+   "english": "\u2018Hamilton\u2019 Creator SLAMS Social Media Slacktivists Who Won\u2019t Get Off Their A*s To Vote (TWEET). There are a lot of people who have a lot to say on the internet about our political process, and especially about the most current election cycle. Yet, some of these same people are the ones who claim to ",
+   "hi": {
+    "native": "\u0939\u0948\u092e\u093f\u0932\u094d\u091f\u0928 Creator SLAMS \u0938\u094b\u0936\u0932 \u092e\u0940\u0921\u093f\u092f\u093e \u0938\u094d\u0932\u0948\u0915\u094d\u091f\u093f\u0935\u093f\u0938\u094d\u091f\u094d\u0938 \u091c\u094b \u0935\u094b\u091f \u0915\u0930\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0905\u092a\u0928\u0947 \u090f*\u090f\u0938 \u0928\u0939\u0940\u0902 \u091b\u094b\u0921\u093c\u0947\u0902\u0917\u0947 (TWEET) \u0964 \u092c\u0939\u0941\u0924 \u0938\u0947 \u0932\u094b\u0917 \u0939\u0948\u0902 \u091c\u093f\u0928\u0915\u0947 \u092a\u093e\u0938 \u0939\u092e\u093e\u0930\u0947 \u0930\u093e\u091c\u0928\u0940\u0924\u093f\u0915 \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e \u0915\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902 \u0907\u0902\u091f\u0930\u0928\u0947\u091f \u092a\u0930 \u092c\u0939\u0941\u0924 \u0915\u0941\u091b \u0915\u0939\u0928\u093e \u0939\u0948, \u0914\u0930 \u0935\u093f\u0936\u0947\u0937 \u0930\u0942\u092a \u0938\u0947 \u0938\u092c\u0938\u0947 \u0939\u093e\u0932\u093f\u092f\u093e \u091a\u0941\u0928\u093e\u0935 \u091a\u0915\u094d\u0930 \u0915\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902\u0964 \u092b\u093f\u0930 \u092d\u0940, \u0907\u0928\u092e\u0947\u0902 \u0938\u0947 \u0915\u0941\u091b \u0932\u094b\u0917 \u0935\u0939\u0940 \u0939\u0948\u0902 \u091c\u094b \u0935\u094b\u091f \u0926\u0947\u0928\u0947 \u0938\u0947 \u090a\u092a\u0930 ",
+    "back": "Hamilton Creator SLAMS Social media slack activists who won't leave their A*S to vote (TWEET). There are many people who have a lot to say on the Internet about our political process, and especially about the most recent election cycle. Yet, some of these people are the ones who claim to be above vo"
+   },
+   "mr": {
+    "native": "\u0939\u0945\u092e\u093f\u0932\u094d\u091f\u0928 Creator SLAMS Social Media Slacktivists Who Won't Get Off Their A*s To Vote (\u091f\u094d\u0935\u093f\u091f) \u0906\u092a\u0932\u094d\u092f\u093e \u0930\u093e\u091c\u0915\u0940\u092f \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u0947\u092c\u0926\u094d\u0926\u0932 \u0906\u0923\u093f \u0935\u093f\u0936\u0947\u0937\u0924\u0903 \u0938\u0927\u094d\u092f\u093e\u091a\u094d\u092f\u093e \u0928\u093f\u0935\u0921\u0923\u0941\u0915\u0940\u091a\u094d\u092f\u093e \u091a\u0915\u094d\u0930\u093e\u092c\u0926\u094d\u0926\u0932 \u0907\u0902\u091f\u0930\u0928\u0947\u091f\u0935\u0930 \u092c\u0930\u0947\u091a \u0915\u093e\u0939\u0940 \u0938\u093e\u0902\u0917\u0923\u093e\u0930\u0947 \u092c\u0930\u0947\u091a \u0932\u094b\u0915 \u0906\u0939\u0947\u0924. \u092e\u093e\u0924\u094d\u0930, \u092f\u093e\u092a\u0948\u0915\u0940 \u0915\u093e\u0939\u0940 \u0932\u094b\u0915 \u0905\u0938\u0947 \u0906\u0939\u0947\u0924 \u091c\u0947 \u092e\u0924\u0926\u093e\u0928\u093e\u092a\u0947\u0915\u094d\u0937\u093e \u0935\u0930 \u0905\u0938\u0932\u094d\u092f\u093e\u091a\u093e \u0926\u093e\u0935\u093e \u0915\u0930\u0924\u093e\u0924, \u0915\u093e\u0930\u0923 \u0924\u094d\u092f\u093e\u0902\u0928\u093e \u0935\u093e\u091f",
+    "back": "Hamilton Creator SLAMS Social Media Slacktivists Who Won't Get Off Their A*s to Vote (Tweet) There are a lot of people on the Internet who say a lot about our political process and especially the current election cycle. However, there are some of these people who claim to be above voting because the"
+   },
+   "gu": {
+    "native": "\u0ab9\u0ac5\u0aae\u0abf\u0ab2\u0acd\u0a9f\u0aa8 \u0aa8\u0abf\u0ab0\u0acd\u0aae\u0abe\u0aa4\u0abe SLAMS \u0ab8\u0acb\u0ab6\u0abf\u0aaf\u0ab2 \u0aae\u0ac0\u0aa1\u0abf\u0aaf\u0abe \u0ab8\u0acd\u0ab2\u0ac7\u0a95\u0acd\u0a9f\u0ac0\u0ab5\u0abf\u0ab8\u0acd\u0a9f\u0acd\u0ab8 \u0a9c\u0ac7 \u0aae\u0aa4\u0aa6\u0abe\u0aa8 \u0a95\u0ab0\u0ab5\u0abe \u0aae\u0abe\u0a9f\u0ac7 \u0aa4\u0ac7\u0aae\u0aa8\u0abe A*s (TWEET) \u0aa8\u0ac7 \u0aa6\u0ac2\u0ab0 \u0aa8\u0ab9\u0ac0\u0a82 \u0a95\u0ab0\u0ac7 (TWEET). \u0a98\u0aa3\u0abe \u0ab2\u0acb\u0a95\u0acb \u0a87\u0aa8\u0acd\u0a9f\u0ab0\u0aa8\u0ac7\u0a9f \u0aaa\u0ab0 \u0a86\u0aaa\u0aa3\u0ac0 \u0ab0\u0abe\u0a9c\u0a95\u0ac0\u0aaf \u0aaa\u0acd\u0ab0\u0a95\u0acd\u0ab0\u0abf\u0aaf\u0abe \u0ab5\u0abf\u0ab6\u0ac7 \u0a98\u0aa3\u0ac1\u0a82 \u0a95\u0ab9\u0ac7 \u0a9b\u0ac7, \u0a85\u0aa8\u0ac7 \u0a96\u0abe\u0ab8 \u0a95\u0ab0\u0ac0\u0aa8\u0ac7 \u0ab8\u0acc\u0aa5\u0ac0 \u0ab5\u0ab0\u0acd\u0aa4\u0aae\u0abe\u0aa8 \u0a9a\u0ac2\u0a82\u0a9f\u0aa3\u0ac0 \u0a9a\u0a95\u0acd\u0ab0 \u0ab5\u0abf\u0ab6\u0ac7. \u0a9c\u0acb \u0a95\u0ac7, \u0a86 \u0a9c \u0ab2\u0acb\u0a95\u0acb\u0aae\u0abe\u0a82\u0aa5\u0ac0 \u0a95\u0ac7\u0a9f\u0ab2\u0abe\u0a95 \u0a8f\u0ab5\u0abe \u0a9b\u0ac7 \u0a95\u0ac7 \u0a9c\u0ac7\u0a93 \u0aae\u0aa4\u0aa6\u0abe\u0aa8 \u0a95\u0ab0\u0aa4\u0abe \u0a89\u0aaa\u0ab0 \u0ab9\u0acb\u0ab5\u0abe\u0aa8\u0acb \u0aa6\u0abe\u0ab5\u0acb \u0a95\u0ab0\u0ac7 \u0a9b\u0ac7, \u0a95",
+    "back": "Hamilton's creator SLAMS is a social media sleazy who won't remove their A*s (TWEET) to vote (TWEET). Many people say a lot about our political process on the Internet, and especially about the most current election cycle. However, there are some of these same people who claim to be above voting bec"
+   },
+   "ta": {
+    "native": "\u0bb9\u0bbe\u0bae\u0bbf\u0bb2\u0bcd\u0b9f\u0ba9\u0bcd Creator SLAMS \u0b9a\u0bae\u0bc2\u0b95 \u0b8a\u0b9f\u0b95 \u0bb8\u0bcd\u0bb2\u0bbe\u0b95\u0bcd\u0b9f\u0bbf\u0bb5\u0bbf\u0bb8\u0bcd\u0b9f\u0bc1\u0b95\u0bb3\u0bcd \u0bb5\u0bbe\u0b95\u0bcd\u0b95\u0bb3\u0bbf\u0b95\u0bcd\u0b95 \u0ba4\u0b99\u0bcd\u0b95\u0bb3\u0bcd A*s \u0b95\u0bcd\u0b95\u0bc1 \u0bb5\u0bc6\u0bb3\u0bbf\u0baf\u0bc7\u0bb1 \u0bae\u0bbe\u0b9f\u0bcd\u0b9f\u0bbe\u0bb0\u0bcd\u0b95\u0bb3\u0bcd (TWEET). \u0b87\u0ba3\u0bc8\u0baf\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd \u0ba8\u0bae\u0ba4\u0bc1 \u0b85\u0bb0\u0b9a\u0bbf\u0baf\u0bb2\u0bcd \u0b9a\u0bc6\u0baf\u0bb2\u0bcd\u0bae\u0bc1\u0bb1\u0bc8 \u0baa\u0bb1\u0bcd\u0bb1\u0bbf, \u0b95\u0bc1\u0bb1\u0bbf\u0baa\u0bcd\u0baa\u0bbe\u0b95 \u0ba4\u0bb1\u0bcd\u0baa\u0bcb\u0ba4\u0bc8\u0baf \u0ba4\u0bc7\u0bb0\u0bcd\u0ba4\u0bb2\u0bcd \u0b9a\u0bc1\u0bb4\u0bb1\u0bcd\u0b9a\u0bbf\u0baf\u0bc8\u0baa\u0bcd \u0baa\u0bb1\u0bcd\u0bb1\u0bbf \u0ba8\u0bbf\u0bb1\u0bc8\u0baf \u0b9a\u0bca\u0bb2\u0bcd\u0bb2\u0bc1\u0bae\u0bcd \u0baa\u0bb2\u0bb0\u0bcd \u0b89\u0bb3\u0bcd\u0bb3\u0ba9\u0bb0\u0bcd. \u0b86\u0ba9\u0bbe\u0bb2\u0bcd, \u0b87\u0ba8\u0bcd\u0ba4 \u0ba8\u0baa\u0bb0\u0bcd\u0b95\u0bb3\u0bbf\u0bb2\u0bcd \u0b9a\u0bbf\u0bb2\u0bb0\u0bcd \u0bb5\u0bbe\u0b95\u0bcd\u0b95\u0bb3\u0bbf\u0baa\u0bcd\u0baa\u0ba4\u0bc8 \u0bb5\u0bbf\u0b9f \u0b85\u0ba4\u0bbf\u0b95\u0bae\u0bbe\u0b95 \u0b87\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0ba4\u0bbe\u0b95\u0b95\u0bcd \u0b95\u0bc2\u0bb1\u0bc1\u0b95\u0bbf\u0bb1\u0bbe\u0bb0\u0bcd\u0b95\u0bb3\u0bcd",
+    "back": "Hamilton Creator SLAMS Social media slacktivists will not go out on their A*s to vote (TWEET). There are a lot of people on the Internet who say a lot about our political process, especially the current election cycle. But some of these people say they're more than just voting because they don't rea"
+   },
+   "bn": {
+    "native": "\u09b9\u09cd\u09af\u09be\u09ae\u09bf\u09b2\u09cd\u099f\u09a8 Creator SLAMS Social Media Slacktivists Who Won't Get Off Their A*s To Vote (\u099f\u09c1\u0987\u099f) \u0986\u09ae\u09be\u09a6\u09c7\u09b0 \u09b0\u09be\u099c\u09a8\u09c8\u09a4\u09bf\u0995 \u09aa\u09cd\u09b0\u0995\u09cd\u09b0\u09bf\u09af\u09bc\u09be \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09c7 \u098f\u09ac\u0982 \u09ac\u09bf\u09b6\u09c7\u09b7 \u0995\u09b0\u09c7 \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8\u09c0 \u099a\u0995\u09cd\u09b0 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09c7 \u0987\u09a8\u09cd\u099f\u09be\u09b0\u09a8\u09c7\u099f\u09c7 \u0985\u09a8\u09c7\u0995 \u0995\u09bf\u099b\u09c1 \u09ac\u09b2\u09be\u09b0 \u0986\u099b\u09c7\u0964 \u09a4\u09ac\u09c7, \u098f\u0987 \u098f\u0995\u0987 \u09ae\u09be\u09a8\u09c1\u09b7\u09a6\u09c7\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 \u0995\u09c7\u0989 \u0995\u09c7\u0989 \u09af\u09be\u09b0\u09be \u09a6\u09be\u09ac\u09bf \u0995\u09b0\u09c7\u09a8 \u09af\u09c7 \u09a4\u09be\u09b0\u09be \u09ad\u09cb\u099f \u09a6\u09c7\u0993\u09af\u09bc\u09be\u09b0 \u099a\u09c7\u09af\u09bc\u09c7 \u09ac\u09c7\u09b6\u09bf, \u09b9\u09af\u09bc \u0995\u09be\u09b0\u09a3 \u09a4\u09be",
+    "back": "Hamilton Creator SLAMS Social Media Slacktivists Who Won't Get Off Their A*s to Vote (Tweet) There is much to be said on the Internet about our political process and especially the current election cycle. However, some of these same people who claim they're more than voting, either because they thin"
+   }
+  },
+  "_done": true,
+  "_minutes": 23.3
+ }
+}

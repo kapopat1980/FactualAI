@@ -3,6 +3,9 @@
 Retrieves the most recent headlines/summaries from a fixed set of news
 outlets and classifies them through the Random Forest pipeline only (the LLM
 is omitted here to preserve responsiveness, per the paper).
+
+The public Reuters RSS service has been discontinued, so it is no longer in
+the default feed list (four outlets: BBC, Al Jazeera, The Hindu, NDTV).
 """
 from __future__ import annotations
 
@@ -14,7 +17,6 @@ from .classifier import RandomForestNewsClassifier
 
 DEFAULT_FEEDS = {
     "BBC": "http://feeds.bbci.co.uk/news/rss.xml",
-    "Reuters": "https://feeds.reuters.com/reuters/topNews",
     "Al Jazeera": "https://www.aljazeera.com/xml/rss/all.xml",
     "The Hindu": "https://www.thehindu.com/news/national/feeder/default.rss",
     "NDTV": "https://feeds.feedburner.com/ndtvnews-top-stories",

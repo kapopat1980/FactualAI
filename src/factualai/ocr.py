@@ -24,4 +24,6 @@ def extract_text_from_image(image_path: str) -> str:
 
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     equalized = cv2.equalizeHist(gray)
-    return pytesseract.image_to_string(equalized)
+    # Default: English. For Indic scripts install the Tesseract language data and set e.g. FACTUALAI_OCR_LANG=eng+hin+mar
+    import os
+    return pytesseract.image_to_string(equalized, lang=os.environ.get("FACTUALAI_OCR_LANG", "eng"))

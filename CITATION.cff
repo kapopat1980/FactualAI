@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper and this release."
+title: "FactualAI: multilingual and multimodal fake news detection with a leakage-aware evaluation"
+version: 1.1.0
+date-released: 2026-10-12
+license: MIT
+repository-code: "https://github.com/kapopat1980/FactualAI"
+authors:
+  - family-names: Rane
+    given-names: Chetana
+    affiliation: "Fergusson College (Autonomous), Pune, India"
+  - family-names: Patil
+    given-names: Lakhichand Khushal
+    affiliation: "Fergusson College (Autonomous), Pune, India"
+  - family-names: Popat
+    given-names: Kalpesh A.
+    affiliation: "Marwadi University, Rajkot, India"
+keywords:
+  - fake news detection
+  - multimodal misinformation
+  - multilingual NLP
+  - dataset artifacts
+  - data leakage
+  - large language models

@@ -1,0 +1,23 @@
+{'original': 44898, 'dedup': 39103, 'dedup_fake': 17907, 'dedup_real': 21196}
+P0 original
+  TF-IDF + LR                        acc=0.9957±0.0012 f1=0.9958 auc=0.9998 (194s)
+  TF-IDF + LinearSVM                 acc=0.9972±0.0008 f1=0.9973 auc=0.9999 (190s)
+  TF-IDF + CNB                       acc=0.9558±0.0028 f1=0.9576 auc=0.9902 (189s)
+  RF on TF-IDF-768 (repo fallback)   acc=0.9978±0.0006 f1=0.9979 auc=0.9999 (326s)
+  RF on LSA-768                      acc=0.9687±0.0013 f1=0.9702 auc=0.9950 (1168s)
+P1 dedup
+  TF-IDF + LR                        acc=0.9927±0.0009 f1=0.9920 auc=0.9995 (171s)
+  TF-IDF + LinearSVM                 acc=0.9960±0.0010 f1=0.9956 auc=0.9998 (171s)
+  TF-IDF + CNB                       acc=0.9555±0.0016 f1=0.9515 auc=0.9904 (166s)
+  RF on TF-IDF-768 (repo fallback)   acc=0.9964±0.0011 f1=0.9961 auc=0.9998 (257s)
+  RF on LSA-768                      acc=0.9528±0.0011 f1=0.9475 auc=0.9903 (976s)
+P2 scrubbed
+  TF-IDF + LR                        acc=0.9882±0.0012 f1=0.9871 auc=0.9989 (169s)
+  TF-IDF + LinearSVM                 acc=0.9926±0.0007 f1=0.9919 auc=0.9994 (171s)
+  TF-IDF + CNB                       acc=0.9503±0.0019 f1=0.9457 auc=0.9880 (169s)
+  RF on TF-IDF-768 (repo fallback)   acc=0.9713±0.0010 f1=0.9685 auc=0.9958 (412s)
+  RF on LSA-768                      acc=0.9444±0.0009 f1=0.9378 auc=0.9872 (966s)
+P2-title scrubbed
+  TF-IDF + LR                        acc=0.9548±0.0019 f1=0.9502 auc=0.9913 (8s)
+  TF-IDF + LinearSVM                 acc=0.9573±0.0023 f1=0.9529 auc=0.9920 (6s)
+  RF on LSA-768                      acc=0.8972±0.0031 f1=0.8826 auc=0.9618 (615s)

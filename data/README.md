@@ -1,35 +1,45 @@
-# Dataset
+# Data
 
-FactualAI is trained and evaluated on the **ISOT Fake News Dataset**
-(44,898 articles: 23,481 labeled fake, 21,417 labeled real), as described in
-Section 4.1 of the paper.
+No data are redistributed in this repository. Place the files as follows:
 
-The raw data is **not redistributed in this repository** (it is a large,
-separately licensed third-party dataset). To reproduce training:
+```
+data/raw/Fake.csv
+data/raw/True.csv
+data/fakenewsnet/politifact_fake.csv
+data/fakenewsnet/politifact_real.csv
+data/fakenewsnet/gossipcop_fake.csv
+data/fakenewsnet/gossipcop_real.csv
+```
 
-1. Download `Fake.csv` and `True.csv`, e.g. from:
-   - Kaggle: https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
-   - Original ISOT source (University of Victoria):
-     https://onlineacademiccommunity.uvic.ca/isot/2022/11/27/fake-news-detection-datasets/
-2. Place both files in `data/raw/`.
-3. Run `python scripts/train.py --data-dir data/raw`.
+## ISOT Fake and Real News dataset
 
-## Citation
+44,898 articles (23,481 fake, 21,417 real). Download `Fake.csv` and `True.csv` from
 
-If you use this dataset, please cite it per the ISOT project's request:
+- Kaggle: https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
+- University of Victoria ISOT Lab: https://onlineacademiccommunity.uvic.ca/isot/2022/11/27/fake-news-detection-datasets/
 
-> Ahmed H, Traore I, Saad S. "Detecting opinion spams and fake news using
-> text classification", Journal of Security and Privacy, Volume 1, Issue 1,
-> Wiley, 2018.
+Please cite:
+
+> Ahmed H, Traore I, Saad S (2017) Detection of online fake news using n-gram analysis and
+> machine learning techniques. ISDDC 2017, LNCS 10618, Springer, pp 127–138.
 >
-> Ahmed H, Traore I, Saad S. (2017) "Detection of Online Fake News Using
-> N-Gram Analysis and Machine Learning Techniques." In: Traore I., Woungang
-> I., Awad A. (eds) Intelligent, Secure, and Dependable Systems in
-> Distributed and Cloud Environments. ISDDC 2017. Lecture Notes in Computer
-> Science, vol 10618. Springer, Cham.
+> Ahmed H, Traore I, Saad S (2018) Detecting opinion spams and fake news using text
+> classification. Security and Privacy 1(1):e9.
+
+Note: the two classes come from different publishers. The real articles carry Reuters
+datelines and tags and 12.9% of rows are exact duplicates. Use the de-duplication and scrubbing
+in `evaluation/common.py` before evaluating any model (see the paper, Section 6).
+
+## FakeNewsNet (titles)
+
+Download the four CSV files from the `dataset/` folder of
+https://github.com/KaiDMML/FakeNewsNet. Please cite:
+
+> Shu K, Mahudeswaran D, Wang S, Lee D, Liu H (2020) FakeNewsNet: A data repository with news
+> content, social context, and spatiotemporal information for studying fake news on social
+> media. Big Data 8(3):171–188.
 
 ## Sample data
 
-`data/sample.csv` contains a small set of hand-written illustrative examples
-(not drawn from ISOT) used only by the test suite and for smoke-testing the
-pipeline without downloading the full dataset.
+`data/sample.csv` contains a few hand-written illustrative examples (not from ISOT) used only by
+the test suite.

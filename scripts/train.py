@@ -10,8 +10,9 @@ Expects `Fake.csv` and `True.csv` in --data-dir (see data/README.md for
 where to obtain the dataset -- it is not redistributed in this repository).
 By default this script uses the lightweight TfidfEmbedder so it runs without
 a PyTorch/sentence-transformers install; pass --embedder sentence-transformer
-to reproduce the exact embedding backend used for the paper's reported
-95% accuracy figure.
+to reproduce the original (P0) evaluation of the production classifier
+(95.0% on a random 80/20 split). That split is affected by duplicate leakage;
+for the leakage-aware protocols in the revised paper use evaluation/.
 """
 from __future__ import annotations
 

@@ -18,7 +18,10 @@ import requests
 MAX_INPUT_CHARS = 1500
 TIMEOUT_SECONDS = 30
 DEFAULT_OLLAMA_URL = "http://localhost:11434/api/generate"
-DEFAULT_MODEL = "llama3.2:1b"
+import os
+
+# Deployed default; LLaMA 3.1 8B ("llama3.1:8b") performed far better in the revised evaluation (Table 7).
+DEFAULT_MODEL = os.environ.get("FACTUALAI_LLM_MODEL", "llama3.2:1b")
 
 _PROMPT_TEMPLATE = """You are a fact-checking assistant. Read the following news \
 article excerpt and decide whether it is more likely to be real or fake news.

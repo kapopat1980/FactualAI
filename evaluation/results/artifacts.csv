@@ -1,0 +1,11 @@
+marker,fake_pct,real_pct
+(Reuters) tag,0.04,99.21
+"Dateline ""CITY (Reuters) -""",0.0,90.86
+"""Featured image""",31.04,0.0
+"""21st Century Wire""",5.33,0.0
+URL (http/www),14.29,0.19
+pic.twitter.com,14.79,0.0
+@handle,26.06,1.31
+"""Getty Images""",17.3,0.02
+"""via"" photo credit",28.75,0.0
+Title fully upper-case word (>=1),79.59,2.5
